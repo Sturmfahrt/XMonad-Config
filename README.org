@@ -5,14 +5,16 @@ this is my new xmonad config. i have decided to do the readme as an org file ins
 * Goals
 the main goals are as follows ( atleast for now )
 ** get a XMonad Config working
+Reasoning should be self evident
 ** get a XMobar Config working
-*** have it look good with doom one color scheme
-*** have it show the workspaces on the left.
-**** WorkSpaces should change color depending on status
-***** One color for Active workspace with the Currently focused window
-***** One color for Active workspaces that are not the workspace with the currently focused window (You will never see this on single monitor setup)
-***** One color for inactive not empty workspaces
-***** One color for inactive empty workspaces
+As i god damn bar at the top with usefull info
+   + have it look good with doom one color scheme
+   + have it show the workspaces on the left.
+     + WorkSpaces should change color depending on status
+       - One color for Active workspace with the Currently focused window
+       - One color for Active workspaces that are not the workspace with the currently focused window (You will never see this on single monitor setup)
+       - One color for inactive not empty workspaces
+       - One color for inactive empty workspaces
 *** have it show the have it show an icon on the far left
 *** have the right hand side show system information (with unique colors to seperate each) such as the following
 **** CPU usage in percentage
