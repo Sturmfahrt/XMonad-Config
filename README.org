@@ -1,28 +1,27 @@
 #+title: XMonad Config Readme
 #+author: Sturmfahrt
 #+date: <2024-09-05 Thu>
-this is my new xmonad config. i have decided to do the readme as an org file instead of an md file.
+this is my new xmonad config. i have decided to do the readme as an org file instead of an md file. and just for the record i have now idea how org mode works but i am trying it to learn it now.
 * Goals
 the main goals are as follows ( atleast for now )
 ** get a XMonad Config working
 Reasoning should be self evident
 ** get a XMobar Config working
-As i god damn bar at the top with usefull info
-   + have it look good with doom one color scheme
-   + have it show the workspaces on the left.
-     + WorkSpaces should change color depending on status
-       - One color for Active workspace with the Currently focused window
-       - One color for Active workspaces that are not the workspace with the currently focused window (You will never see this on single monitor setup)
-       - One color for inactive not empty workspaces
-       - One color for inactive empty workspaces
-*** have it show the have it show an icon on the far left
-*** have the right hand side show system information (with unique colors to seperate each) such as the following
-**** CPU usage in percentage
-***** number must change color depending on percentage
-**** Memory Usage
-***** Must be displayed as "X:GB/Total:GB"
-***** Number Color must change based on a percentage used
-****** May also just use a specific numbers to determine color instead of percentage
+   1. have it look good with doom one color scheme
+   2. have it show the workspaces on the left.
+      + WorkSpaces should change color depending on status
+        - One color for Active workspace with the Currently focused window
+        - One color for Active workspaces that are not the workspace with the currently focused window (You will never see this on single monitor setup)
+        - One color for inactive not empty workspaces
+        - One color for inactive empty workspaces
+      + have it show the have it show an icon on the far left
+   3. have the right hand side show system information (with unique colors to seperate each) such as the following
+      + CPU usage in percentage
+        - number must change color depending on percentage
+      + Memory Usage
+        - Must be displayed as "X:GB/Total:GB"
+        - Number Color must change based on a percentage used
+          - May also just use a specific numbers to determine color instead of percentage
 **** Total Storage Usage
 ***** Display in the form of "X:GB/Total:GB"
 **** Current volume percentage
