@@ -22,13 +22,13 @@ Reasoning should be self evident
         - Must be displayed as "X:GB/Total:GB"
         - Number Color must change based on a percentage used
           - May also just use a specific numbers to determine color instead of percentage
-**** Total Storage Usage
-***** Display in the form of "X:GB/Total:GB"
-**** Current volume percentage
-**** Date and Time
-***** Time is to be in 24 Hr format
-***** Date is to be in Month Day Year format For example
-****** 01-29-2025
-**** Currently Active keyboard layout
-**** Network information
-***** Must display "interface: Upload | Download"
+      + Total Storage Usage
+        - Display in the form of "X:GB/Total:GB"
+      + Current volume percentage
+      + Date and Time
+        - Time is to be in 24 Hr format
+        - Date is to be in Month Day Year format For example
+          - 01-29-2025
+      + Currently Active keyboard layout
+      + Network information
+        - Must display "interface: Upload | Download"
