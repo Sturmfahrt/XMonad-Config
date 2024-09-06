@@ -8,6 +8,7 @@ import XMonad.Util.Loggers
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
+import XMonad.Util.SpawnOnce
 
 import Distribution.InstalledPackageInfo (showFullInstalledPackageInfo)
 import GHC.Real (ratioPrec)
@@ -27,6 +28,8 @@ myConfig = def
     {
       modMask = mod4Mask  -- Rebind Mod to the Super key
     , layoutHook = myLayout
+    , startupHook = myStartupHook
+    , terminal = "alacritty"
     }
   `additionalKeysP`
     [ ("M-S-z", spawn "xscreensaver-command -lock")
@@ -43,8 +46,8 @@ myLayout = tiled ||| Mirror tiled ||| Full ||| threeCol
     ratio = 1/2     -- Default proportion of screen occupied by master pane
     delta = 3/100   -- Percent of screen to increment by when resizing panes
 
-myXmobarPP :: PP
-myXmobarPP = def
+myXmobarPP :: PP -- TODO Fuck around with the Xmobar settings here to get something nice.
+myXmobarPP = def -- you can delete all that is in scope of this definition to just use the default for now if truely needed.
     { ppSep             = magenta " • "
     , ppTitleSanitize   = xmobarStrip
     , ppCurrent         = wrap " " "" . xmobarBorder "Top" "#8be9fd" 2
@@ -70,3 +73,10 @@ myXmobarPP = def
     yellow   = xmobarColor "#f1fa8c" ""
     red      = xmobarColor "#ff5555" ""
     lowWhite = xmobarColor "#bbbbbb" ""
+
+myStartupHook :: X ()
+myStartupHook = do
+    spawnOnce "trayer --edge top --align right --SetDockType true \
+              \--SetPartialStrut true --expand true --width 10 \
+              \--transparent true --tint 0x5f5f5f --height 18"
+    spawnOnce "nitrogen --restore &"
